@@ -1,0 +1,12 @@
+.engag-bar {
+	width:100%;
+	display:flex;
+	justify-content:center;
+	padding:25px;
+	position:fixed;
+	bottom:0px;
+	z-index:99;
+	background-color:white;
+	border-radius:10px;
+	box-shadow: 0 0 10px rgba(0,0,0,.12);
+}

@@ -1,0 +1,29 @@
+.portfolio{
+	display:flex;
+	justify-content: center;
+	flex-direction:column;
+
+	.title{
+		font-weight: 700;
+    	font-size: 20px;
+		margin-top: 30px;
+
+	}
+
+	.text {
+		font-size: 12px;
+    	text-transform: uppercase;
+    	letter-spacing: 1.8px;
+    	font-weight: 600;
+    	color: grey;
+    	margin-top: 8px;
+	}
+
+	.portfolio-items{
+		display:flex;
+		justify-content:space-between;
+		margin-left:5%;
+		margin-right:5%;
+		margin-top:25px;
+	}
+}

@@ -1,0 +1,38 @@
+.header {	
+	width: 100%;
+	display: flex;
+	justify-content:center;
+	flex-direction:column;
+
+	.header-item{
+		display: flex;
+		justify-content:center;
+		margin-bottom:20px;
+
+		.logo-centered {
+			width: 23%;
+
+		    img {
+		      width: 100%;
+		      height: 100%;
+		    }
+		}
+
+		.slogen{
+			width: 50%;
+			font-size: 42px;
+    		line-height: 52px;
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+
+		.video-centered {
+			width: 70%;
+			margin-bottom: 15px;
+			display: flex;
+			justify-content:center;
+		}
+
+	}
+	
+}
