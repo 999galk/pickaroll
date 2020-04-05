@@ -10,9 +10,9 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Promo headline='Only ₪xx each' text='Shipping is always free'/>
-      <Portfolio />
-      <Promo headline='Another promo headline' text='promo text'/>
+      <Promo headline='Only ₪xx each' desc='Shipping is always free'/>
+      <Portfolio deviceType='desktop'/>
+      <Promo headline='Another promo headline' desc='promo text'/>
       <Footer/>
       <EngBar />
     </div>

@@ -17,13 +17,13 @@
 		}
 
 		.slogen{
-    		line-height: 52px;
 			font-weight: bold;
 			margin-bottom: 30px;
 		}
 
 		.video-centered {
-			width: 70%;
+			width: 90%;
+			height:100%;
 			margin-bottom: 15px;
 			display: flex;
 			justify-content:center;
@@ -43,7 +43,10 @@
 
 		  .slogen{
 			width: 60%;
-			font-size: 42px;
+			font-size: 40px;
+			}
+			.video-centered {
+				width: 70%;
 			}
 		  
 		}
@@ -61,7 +64,10 @@
 
 		  .slogen{
 			width: 60%;
-			font-size: 42px;
+			font-size: 40px;
+			}
+			.video-centered {
+				width: 70%;
 			}
 		  
 		}
@@ -78,8 +84,11 @@
 			}
 
 		  .slogen{
-			width: 70%;
-			font-size: 38px;
+			width: 60%;
+			font-size: 40px;
+			}
+			.video-centered {
+				width: 80%;
 			}
 		  
 		}
@@ -94,8 +103,12 @@
 			width: 30%;
 			}
 		  .slogen{
-			width: 70%;
-			font-size: 38px;
+			width: 90%;
+			font-size: 35px;
+			}
+
+			.video-centered {
+				width: 80%;
 			}
 		  
 		}
@@ -112,8 +125,11 @@
 			}
 
 		  .slogen{
-			width: 75%;
-			font-size: 22px;
+			width: 90%;
+			font-size: 35px;
+			}
+			.video-centered {
+				width: 80%;
 			}
 		  
 		}
@@ -129,8 +145,14 @@
 			}
 
 		  .slogen{
-			width: 75%;
-			font-size: 22px;
+			width: 90%;
+			font-size: 24px;
+			}
+			.video-centered {
+				width: 80%;
+			}
+			#player {
+			    height: 40% !important;
 			}
 		  
 		}

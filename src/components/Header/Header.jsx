@@ -22,7 +22,7 @@ const Header = () => {
 			</div>
 			<div className='header-item'>
 				<div className='video-centered'>
-					<ReactPlayer style={divStyle} url='https://www.youtube.com/watch?v=ay1_6sfxl7c' playing/>
+					<ReactPlayer width='90%' height='500px' style={divStyle} url='https://www.youtube.com/watch?v=ay1_6sfxl7c' playing/>
 				</div>
 			</div>
 		</div>
