@@ -17,7 +17,7 @@ const Header = () => {
 			</div>
 			<div className='header-item'>
 				<div className='slogen'>
-					Custom made and design rolling papers
+					Custom made & Designed Rolling Papers
 				</div>
 			</div>
 			<div className='header-item'>
