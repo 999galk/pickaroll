@@ -5,7 +5,7 @@ import './EngBar.scss';
 const EngBar = () => {
 	return(
 		<div className='engag-bar'>
-			<CustomButton inverted> Style Your Own </CustomButton>
+			<CustomButton inverted> Get Started </CustomButton>
 		</div>
 	)
 }
