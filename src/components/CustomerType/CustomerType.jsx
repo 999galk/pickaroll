@@ -9,7 +9,7 @@ const changeButtonPressed = (type) => {
 	}else {
 		option.classList.add("active");
 	}
-}
+} 
 
 const CustomerType = ({propChanged}) => {
 	return(
@@ -22,8 +22,8 @@ const CustomerType = ({propChanged}) => {
 					</div>
 					<div className='titleContainer'>
 						<span className='title'>Private Use</span>
+						<span className='text'>Im styling for myself</span>
 					</div>
-					<span className='text'>Im styling for myself</span>
 				</div>
 				<div className='option' id='Business/Event' onClick={() => {changeButtonPressed('Business/Event');propChanged('customerType','Business/Event');}}>
 					<div className='option-image'>
@@ -31,8 +31,8 @@ const CustomerType = ({propChanged}) => {
 					</div>
 					<div className='titleContainer'>
 						<span className='title'>Business/Event</span>
+						<span className='text'>Im styling for an event </span>
 					</div>
-					<span className='text'>Im styling for an event </span>
 				</div>
 			</div>
 		</div>
