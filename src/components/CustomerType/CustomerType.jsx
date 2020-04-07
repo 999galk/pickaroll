@@ -4,6 +4,15 @@ import selfRoll from './selfRoll1.png';
 
 const changeButtonPressed = (type) => {
 	const option = document.getElementById(type);
+	const personal = document.getElementById('Private');
+	const business = document.getElementById('Business/Event');
+	if(type==='Business/Event' && personal.classList.contains("active")){
+		personal.classList.remove("active");
+	}
+	if(type==='Private' && business.classList.contains("active")){
+		business.classList.remove("active");
+	}
+	
 	if(option.classList.contains("active")){
 		option.classList.remove("active");
 	}else {
