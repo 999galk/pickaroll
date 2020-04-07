@@ -48,9 +48,6 @@ const Header = () => {
 			<div className='carousel-container'>
 				<Carousel showStatus={false} showThumbs={false} showIndicators={false}>
 				<div className='image-container'>
-					<img src={bidud} alt='bidud'/>
-				</div>
-				<div className='image-container'>
 					<img src={blackWhite} alt='blackWhite'/>
 				</div>
 				<div className='image-container'>	
@@ -61,6 +58,9 @@ const Header = () => {
 				</div>
 				<div className='image-container'>
 					<img src={wedding} alt='wedding'/>
+				</div>
+				<div className='image-container'>
+					<img src={bidud} alt='bidud'/>
 				</div>
 				</Carousel>
 			</div>
