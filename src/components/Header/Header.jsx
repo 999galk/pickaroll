@@ -41,12 +41,13 @@ const Header = () => {
 				</div>
 			</div>
 			<div className='header-item'>
-				<div className='slogen'>
-					Custom made & Designed Rolling Papers
+				<div className='slogen animated fadeInLeft delay-1s'>
+					<span>Custom made & Designed Rolling Papers</span>
 				</div>
 			</div>
-			<div className='carousel-container'>
-				<Carousel showStatus={false} showThumbs={false} showIndicators={false}>
+			<div className='header-item'>
+			<div className='carousel-container animated fadeInRight delay-2s'>
+				<Carousel autoPlay={true} showStatus={false} showThumbs={false} showIndicators={false} infiniteLoop={true}>
 				<div className='image-container'>
 					<img src={blackWhite} alt='blackWhite'/>
 				</div>
@@ -63,6 +64,7 @@ const Header = () => {
 					<img src={bidud} alt='bidud'/>
 				</div>
 				</Carousel>
+			</div>
 			</div>
 		</div>
 	)

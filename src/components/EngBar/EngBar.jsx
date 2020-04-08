@@ -7,7 +7,7 @@ const EngBar = () => {
 	return(
 		<div className='engag-bar'>
 
-			<Link className='' to='/getStarted'><CustomButton inverted> Let's Go </CustomButton></Link>
+			<Link to='/getStarted'><CustomButton inverted> Let's Go </CustomButton></Link>
 		</div>
 	)
 }

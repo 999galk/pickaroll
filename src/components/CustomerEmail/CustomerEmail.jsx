@@ -2,16 +2,18 @@ import React from 'react';
 import './CustomerEmail.scss';
 import Message from '../Message/Message';
 
-const CustomerEmail = ({name, propChanged, sendEmail, step}) => {
-	const buttonsDiv=document.querySelector('#root > div > div > div > div:nth-child(3) > div');
-	if(buttonsDiv){
-		buttonsDiv.remove();
+const CustomerEmail = ({name, propChanged, sendEmail, email}) => {
+	if(document.querySelector('#customer-email')){
+		const buttonsDiv=document.querySelector('#customer-email').parentElement.parentElement.lastElementChild;
+		if(buttonsDiv.children[1]){
+			buttonsDiv.children[1].remove();
+		}
 	}
 
 	return(
-		<div className='customer-email'>
+		<div className='customer-email animated fadeInRight' id='customer-email'>
 			<span className='title'>Nice to meet you {name}</span>
-			<input type='email' placeholder='Insert email address' onChange={event => propChanged('email', event.target.value)}/>
+			<input required type='email' value={email} placeholder='Insert email address' onChange={event => propChanged('email', event.target.value)}/>
 			<button className='submitBtn' type='button' onClick={() =>{propChanged('end', 4);sendEmail();} }>Hit me up!</button>
 		</div>
 	)

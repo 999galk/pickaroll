@@ -5,10 +5,9 @@
 	align-items: center;
 
 	.question{
-		font-family: 'Open Sans Condensed';
   		font-weight: bolder;
   		font-size: 38px;
-  		margin:18px 0px 18px 0px;
+  		margin:18px 0px 0px 0px;
 	}
 
 	.options{
@@ -24,14 +23,14 @@
 			margin:5%;
 			box-shadow: 0 2px 15px 0 rgba(0,0,0,.1);
 			cursor: pointer;
-			width:30%;
+			width:35%;
 			
 			.option-image{
 				display:flex;
 				justify-content:center;
 				margin:5%;
 				img{
-					width:90%;
+					width:72%;
 				}
 			}
 
@@ -39,7 +38,7 @@
 				display: flex; 
 				flex-direction:column;
 				justify-content:center;
-				width: 95%;
+				width: 90%;
     			margin-left: auto;
     			margin-right: auto;
 

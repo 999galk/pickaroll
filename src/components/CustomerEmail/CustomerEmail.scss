@@ -5,7 +5,7 @@
 	background-color:white;
 	border-radius: 8px;
 	margin:5% 30% 5% 30%;
-	padding: 6%;
+	padding: 2%;
 
 	.title{
 		font-size: 32px;
@@ -17,10 +17,17 @@
 		font-size:25px;
 		border-radius: 8px;
 		padding:15px;
+		max-width:80%;
+		margin-left:auto;
+		margin-right:auto;
+		overflow: hidden;
 	}
 
 	.submitBtn{
 		margin-top:30px;
+		width:55%;
+		margin-left:auto;
+		margin-right:auto;
 	}
 
 
@@ -90,7 +97,13 @@
 				input{
 					width:100%;
 					font-size:20px;
-					margin-bottom:25%;
+					margin-bottom:10%;
+				}
+				.submitBtn{
+					margin-top:15px;
+					width:75%;
+					margin-left:auto;
+					margin-right:auto;
 				}
 			}
 		}
@@ -110,7 +123,13 @@
 				input{
 					width:100%;
 					font-size:20px;
-					margin-bottom:25%;
+					margin-bottom:10%;
+				}
+				.submitBtn{
+					margin-top:15px;
+					width:75%;
+					margin-left:auto;
+					margin-right:auto;
 				}
 			}
 		  

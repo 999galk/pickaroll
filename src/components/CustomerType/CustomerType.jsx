@@ -22,7 +22,7 @@ const changeButtonPressed = (type) => {
 
 const CustomerType = ({propChanged}) => {
 	return(
-		<div className='customer-type'>
+		<div className='customer-type animated fadeInRight delay-1s'>
 			<span className='question'>Who is it for?</span>
 			<div className='options'>
 				<div className='option' id='Private' onClick={() => {changeButtonPressed('Private');propChanged('customerType','Private');}}>
