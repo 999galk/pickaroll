@@ -8,7 +8,7 @@ const Footer = () => {
 			<span className='text'>Follow us on social media</span>
 			<div className="contact">
 		        <div className="social-links flex-center">
-		          <a href="https://www.facebook.com/pick_a_roll-104657234374362/" target="_blank" className='flex-center-column'>
+		          <a href="https://www.facebook.com/pick_a_roll-104657234374362/" target="_blank">
 		            <img src={facebookIcon} alt='facebook'/>
 		          </a>
 		          <a href="https://www.instagram.com/pick_a_roll/" target="_blank" className='flex-center-column'>

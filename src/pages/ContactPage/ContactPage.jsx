@@ -1,5 +1,8 @@
 import React from 'react';
-import MultiStep from 'react-multistep';
+import ReactWizard from "react-bootstrap-wizard";
+import { Container, Row, Col } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "react-bootstrap-wizard/dist/react-wizard.scss";
 import CustomerType from '../../components/CustomerType/CustomerType';
 import CustomerName from '../../components/CustomerName/CustomerName';
 import CustomerEmail from '../../components/CustomerEmail/CustomerEmail';
@@ -11,54 +14,8 @@ class ContactPage extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			email : localStorage.getItem('email'),
-			name : localStorage.getItem('name'),
-			customerType: localStorage.getItem('customerType'),
-			step : ''
+			submited : false
 		}
-	}
-
-	// addBtnClasses = () => {
-	// 	const pageButtons = document.getElementsByTagName('button');
-	// 	for(let i=0;i<pageButtons.length; i++){
-	// 		if(pageButtons[i].innerText === ('NEXT' || 'Next')){
-	// 			pageButtons[i].classList.add('next-button','animated','fadeInRight');
-	// 		}
-	// 		if (pageButtons[i].innerText === 'Prev'){
-	// 			pageButtons[i].classList.add('prev-button','animated','fadeInLeft');
-	// 		}
-	// 	}
-			
-	// }
-		
-	// 	// const nextBtn= document.getElementsByClassName('next-button')[0];
-	// 	// nextBtn.addEventListener("click", (event) => {
-	// 	// 	if(document.getElementsByTagName('input')[0]){
-	// 	// 		if( !document.getElementsByTagName('input')[0].value ){
-	// 	// 			event.preventDefault();
-	// 	// 			window.alert('found no value');
-	// 	// 			document.getElementsByTagName('input')[0].classList.add('animated', 'shake');
-	// 	// 		}
-	// 	// 	}
-	// 	// })
-	// // }
-
-	propChanged = (prop,type) => {
-		console.log('ditected type change: ', prop, type);
-		if(prop === 'name'){
-			this.setState({name : type, step: 2});
-			localStorage.setItem('name', type);
-		}else if(prop === 'customerType'){
-			this.setState({customerType : type, step: 1});
-			localStorage.setItem('customerType', type);
-		}else if(prop === 'email'){
-			this.setState({email : type, step: 3});
-			localStorage.setItem('email', type);
-		}else if(prop === 'end'){
-			this.setState({step : type});
-			localStorage.clear('name', 'customerType', 'email');
-		}
-		
 	}
 
 	sendEmail = () => {
@@ -66,9 +23,9 @@ class ContactPage extends React.Component {
 		const service_id = "default_service";
 	  	const template_id = "pickaroll_lead";
 	    const templateParams = {
-	    name: this.state.name,
-	    email: this.state.email,
-	    customerType : this.state.customerType
+	    name: localStorage.getItem('name'),
+	    email: localStorage.getItem('email'),
+	    customerType : localStorage.getItem('customerType')
 		};
 
 		emailjs.send(service_id,template_id, templateParams, 'user_tczbWovwJF1LXUPJkdNf2')
@@ -77,25 +34,67 @@ class ContactPage extends React.Component {
 	    }, (err) => {
 	       console.log('FAILED...', err);
 	    });
-	}
 
-	componentDidMount() {
-    	// this.addBtnClasses();
-    }
+	    this.setState({submited : true});
+	    localStorage.clear('name', 'customerType', 'email');
+	}
 	
 	render() {
 		console.log('currentState:', this.state);
 		const {name,email,customerType,step} = this.state;
+		const {propChanged} = this;
 		const steps = [
-              {name: 'StepOne', component: <CustomerType propChanged={this.propChanged}/>},
-              {name: 'StepTwo', component: <CustomerName name={name} propChanged={this.propChanged}/>},
-              {name: 'Submit', component: <CustomerEmail name={name} email={email} propChanged={this.propChanged} sendEmail={this.sendEmail}/>}
-            ];
+		  {
+		    stepName: "1/3",
+		    stepIcon: "tim-icons icon-single-02",
+		    component: CustomerType,
+		    stepProp: {
+		      propChanged: propChanged
+		    }
+		  },
+		  {
+		    stepName: "2/3",
+		    stepIcon: "tim-icons icon-settings-gear-63",
+		    component: CustomerName,
+		    stepProp: {
+		      name: this.state.name,
+		      propChanged: this.propChanged
+		    }
+		  },
+		  {
+		    stepName: "3/3",
+		    stepIcon: "tim-icons icon-delivery-fast",
+		    component: CustomerEmail,
+		    stepProp: {
+		      name: this.state.name,
+		      email: this.state.email,
+		      propChanged: this.propChanged
+		    }
+		  }
+		];
+
 		return(
 		<div className='contact-page'>
-			{
-				step===4 ? <Message name={name} /> : <MultiStep showNavigation={true} steps={steps}/>
-			}
+		{
+			! this.state.submited ?
+			<Container fluid style={{ marginTop: "15px" }}>
+		        <Row>
+		          <Col xs={12} md={9} className="mr-auto ml-auto">
+		            <ReactWizard
+		              steps={steps}
+		              navSteps
+		              title="Contact Us"
+		              headerTextCenter
+		              validate
+		              color="primary"
+		              finishButtonClick={this.sendEmail}
+		            />
+		          </Col>
+		        </Row>
+	      </Container>
+	      : <Message name={this.state.name} />
+		}
+		
 		</div>
 		)
 	}
