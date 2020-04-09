@@ -1,11 +1,10 @@
 import React from 'react';
 import './Promo.scss';
 
-const Promo = ({headline, desc}) => {
+const Promo = ({children, ...otherProps}) => {
 	return(
-		<div className='promo'>
-			<span className='promo-healine'>{headline}</span>
-			<span className='promo-description'>{desc}</span>
+		<div className='promo flex-center-column'>
+			{children}
 		</div>
 	)
 }

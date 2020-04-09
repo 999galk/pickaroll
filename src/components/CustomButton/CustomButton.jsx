@@ -11,7 +11,7 @@ const CustomButton = ({
     className={`${inverted ? 'inverted' : ''} custom-button`}
     {...otherProps}
   >
-    {children}
+  {children}
   </button>
 );
 

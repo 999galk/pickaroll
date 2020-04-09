@@ -3,7 +3,7 @@ import './PortfolioItem.scss';
 
 const PortfolioItem = ({imageUrl}) => {
 	return(
-		<div className='portfolio-item'>
+		<div className='portfolio-item flex-center-column'>
 			<div className='image'>
 				<img src={imageUrl} alt='item'/>
 			</div>

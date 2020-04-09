@@ -1,31 +1,82 @@
+@import '../../index.scss';
 .portfolio{
-	display:flex;
-	justify-content: center;
-	flex-direction:column;
-	margin-top: 25px;
-	margin-bottom: 40px;
+	margin-top: 30px;
+	margin-bottom: 50px;
 
 	.title{
 		font-weight: 700;
-    	font-size: 20px;
+    	font-size: $default-font-size;
 		margin-top: 30px;
+
+		@include respond(phone) {
+        font-size: $small-font-size;
+	    }
+	    @include respond(phone-xs) {
+	        font-size: $small-font-size;
+	    }
+	    @include respond(tab-port) {
+	        font-size: $default-font-size;
+	    }
+	    @include respond(tab-land) {
+	        font-size: $default-font-size;
+	    }
+	    @include respond(big-desktop) {
+	        font-size: $default-font-size;
+	    }
 
 	}
 
 	.text {
-		font-size: 12px;
+		font-size: $mid-font-size;
     	text-transform: uppercase;
     	letter-spacing: 1.8px;
     	font-weight: 600;
     	color: grey;
     	margin-top: 8px;
+
+    	@include respond(phone) {
+        font-size: $small-font-size;
+	    }
+	    @include respond(phone-xs) {
+	        font-size: $small-font-size;
+	    }
+	    @include respond(tab-port) {
+	        font-size: $mid-font-size;
+	    }
+	    @include respond(tab-land) {
+	        font-size: $mid-font-size;
+	    }
+	    @include respond(big-desktop) {
+	        font-size: $default-font-size;
+	    }
 	}
 
 	.portfolio-items{
-		display:flex;
-		justify-content: space-between;
 		margin-left:5%;
 		margin-right:5%;
 		margin-top:25px;
+
+		@include respond(phone) {
+        	margin-left:2%;
+			margin-right:2%;
+	    }
+	    @include respond(phone-xs) {
+	        margin-left:2%;
+			margin-right:2%;
+	    }
+	    @include respond(tab-port) {
+	        margin-left:2%;
+			margin-right:2%;
+	    }
+	    @include respond(tab-land) {
+	        margin-left:2%;
+			margin-right:2%;
+	    }
+	    @include respond(big-desktop) {
+	        margin-left:5%;
+			margin-right:5%;
+	    }
 	}
+
+
 }

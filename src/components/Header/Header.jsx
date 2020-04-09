@@ -1,30 +1,31 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import './Header.scss';
-import logo from './logo.png';
-import bidud from './bidud.jpg';
-import blackWhite from './black-white.jpg';
-import red from './red.jpg';
-import saveTheDate from './save-the-date.jpg';
-import wedding from './wedding-invite.jpg';
+import logo from './assets/logo.png';
+import bidud from './assets/bidud.jpg';
+import blackWhite from './assets/black-white.jpg';
+import red from './assets/red.jpg';
+import saveTheDate from './assets/save-the-date.jpg';
+import wedding from './assets/wedding-invite.jpg';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 
 const Header = () => {
 	return(
-		<div className='header'>
-			<div className='header-item'>
+		<div className='header flex-center-column'>
+			<div className='header-item flex-center'>
 				<div className='logo-centered'>
 					<img src={logo} alt='logo'/>
 				</div>
 			</div>
-			<div className='header-item'>
-				<div className='slogen animated fadeInLeft delay-1s'>
-					<span>Custom made & Designed Rolling Papers</span>
+			<div className='header-item flex-center'>
+				<div className='slogen flex-center-column animated fadeInLeft delay-1s'>
+					<span className='headline'>Design Your Own Rolling Papers</span>
+					<span className='text'>Custom made rolling papers</span>
 				</div>
 			</div>
-			<div className='header-item'>
+			<div className='header-item flex-center'>
 			<div className='carousel-container animated fadeInRight delay-2s'>
 				<Carousel autoPlay={true} showStatus={false} showThumbs={false} showIndicators={false} infiniteLoop={true}>
 				<div className='image-container'>
