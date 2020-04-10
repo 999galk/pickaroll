@@ -2,7 +2,6 @@ import React from 'react';
 import './CustomerType.scss';
 import selfRoll from './selfRoll1.png';
 
-
 class CustomerType extends React.Component {
 	constructor(props){
 		super(props);
@@ -12,6 +11,7 @@ class CustomerType extends React.Component {
 	}
 
 	changeButtonPressed = (type) => {
+
 		const option = document.getElementById(type);
 		const personal = document.getElementById('Private');
 		const business = document.getElementById('Business/Event');
@@ -27,6 +27,11 @@ class CustomerType extends React.Component {
 		}else {
 			option.classList.add("active");
 		}
+
+		const btn=document.querySelector('#root > div > div > div > div > div > div > div > div.card-footer > div:nth-child(1) > button');
+		btn.click();
+		const foot = document.getElementsByClassName('card-footer')[0];
+		foot.classList.add('unhide');
 	} 
 
 	propChanged = (type) => {
@@ -35,6 +40,11 @@ class CustomerType extends React.Component {
 		localStorage.setItem('customerType', type);
 	}
 	
+	componentDidMount(){
+		const foot = document.getElementsByClassName('card-footer')[0];
+		foot.classList.add('hide');
+	}
+
 	render(){
 		const {propChanged, changeButtonPressed} = this;
 		return(

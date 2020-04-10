@@ -1,10 +1,11 @@
 @import '../../index.scss';
 .customer-type{
-	align-items: center;
+	background-color:white; 
+	border-radius: 8px;
+	align-items:center;
 
 	.question{
   		font-weight: bolder;
-  		margin:18px 0px 0px 0px;
   		
   		@include respond(phone) {
         font-size: $default-font-size;
@@ -94,11 +95,9 @@
 				}
 
 			}
-			
 
-			
+		
 		}
-
 		.active{
 			border:#5081ff 2px solid;
 		}
@@ -106,6 +105,10 @@
 	}
 
 	@include respond(phone) {
+		margin:12% 0% 12% 0%;
+		.question{
+  			margin-bottom:10%;
+  		}
 		.options{
 		flex-direction:column;
 			.option{
@@ -131,6 +134,10 @@
 		}
     }
     @include respond(phone-xs) {
+    	margin:12% 0% 12% 0%;
+    	.question{
+  			margin-bottom:10%;
+  		}
         .options{
         	flex-direction:column;
 			.option{

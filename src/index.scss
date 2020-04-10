@@ -4,6 +4,7 @@
 
 html{
   height: 100%;
+  margin: 0; 
 } 
 
 body {
@@ -28,6 +29,12 @@ $default-font-size: 1.4rem;/*desktop, mid device titles*/
 $big-font-size: 1.8rem;/*desktop titles*/
 $mid-font-size: 1.1rem;/*mid-device, small device titles*/
 $small-font-size: 1rem;/*smaill-device*/
+.hide{
+  display:none;
+}
+.unhide{
+  display:block;
+}
 
 .flex-center{
 	display:flex; 

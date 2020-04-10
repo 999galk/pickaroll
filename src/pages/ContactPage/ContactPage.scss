@@ -1,46 +1,67 @@
 @import '../../index.scss';
 .contact-page{
-    height:100%;
-
-.container-fluid{
-    height:100%;
-    margin-bottom:15px;
-}
-.row{
-    height:100%;
-}
-.wizard-container{
     height: 100%;
-}
+    margin: 0;
+    overflow: hidden;
 
-.wizard-container .card-wizard.active{
-    height:100%;
-}
-
-.wizard-container .card-wizard .card-header{
-    font-family: 'Assistant', sans-serif !important;
-    color: white;
-    font-weight: bolder;
-
-        height: 25%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    .card-title {
-        margin-bottom: 1.5rem;
+    .container-fluid{
+        height:100%;
     }
-}
-.wizard-container .card-wizard .card-footer .btn{
-    background-color: #5081ff;
-}
+    .row{
+        height:100%;
+    }
+    .wizard-container{
+       height: 100%;
+       
+       @include respond(phone) {
+            padding-bottom: 10%;
+        }
+        @include respond(phone-xs) {
+            padding-bottom: 10%;
+        }
+        @include respond(tab-port) {
+            padding-bottom: 4%;
+        }
+        @include respond(tab-land) {
+            padding-bottom: 4%;
+        }
+        @include respond(big-desktop) {
+            padding-bottom: 4%;
+        }
+    }
 
-.wizard-container .card-wizard .card-footer .btn:active:focus, .wizard-container .card-wizard .card-footer .btn:active:hover{
-    background-color: #5081ff;
-}
+    .wizard-container .card-wizard.active{
+        height:100%;
+    }
 
-.wizard-container .card-wizard .card-footer .btn:hover, .wizard-container .card-wizard .card-footer .btn:focus, .wizard-container .card-wizard .card-footer .btn:active, .wizard-container .card-wizard .card-footer .btn.active{
-    background-color: #5081ff;
-}
+    .wizard-container .card-wizard .card-header{
+        font-family: 'Assistant', sans-serif !important;
+        color: white;
+        font-weight: bolder;
+
+            height: 25%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .card-title {
+            margin-bottom: 1.5rem;
+        }
+    }
+    .wizard-container .card-wizard .card-footer .btn{
+        background-color: #5081ff;
+    }
+
+    .wizard-container .card-wizard .card-footer .btn:active:focus, .wizard-container .card-wizard .card-footer .btn:active:hover{
+        background-color: #5081ff;
+    }
+
+    .wizard-container .card-wizard .card-footer .btn:hover, .wizard-container .card-wizard .card-footer .btn:focus, .wizard-container .card-wizard .card-footer .btn:active, .wizard-container .card-wizard .card-footer .btn.active{
+        background-color: #5081ff;
+    }
+    .card card-wizard active card{
+        height:100%;
+
+    }
 
 
 }

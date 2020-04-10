@@ -37,7 +37,7 @@ class App extends React.Component {
 				<div className="App">
 			      <Switch>	
 			          <Route exact path='/' component={LandingPage} />
-			          <Route path='/getstarted' component={ContactPage} />
+			          <Route exact path='/getstarted' component={ContactPage} />
 			      </Switch>
 			    </div>
 			)
