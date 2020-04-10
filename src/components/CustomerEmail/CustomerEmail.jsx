@@ -1,6 +1,5 @@
 import React from 'react';
 import './CustomerEmail.scss';
-import Message from '../Message/Message';
 
 class CustomerEmail extends React.Component{
 	// if(document.querySelector('#customer-email')){
@@ -24,7 +23,7 @@ class CustomerEmail extends React.Component{
 
 	render(){
 		return(
-			<div className='customer-email animated fadeInRight' id='customer-email'>
+			<div className='customer-email animated fadeInRight flex-center-column' id='customer-email'>
 				<span className='title'>Nice to meet you { localStorage.getItem('name') ? localStorage.getItem('name') : null}</span>
 				<input required type='email' value={localStorage.getItem('email')} placeholder='Insert email address' onChange={event => this.propChanged(event.target.value)}/>
 			</div>

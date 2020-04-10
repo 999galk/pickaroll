@@ -38,10 +38,10 @@ class CustomerType extends React.Component {
 	render(){
 		const {propChanged, changeButtonPressed} = this;
 		return(
-			<div className='customer-type animated fadeInRight delay-1s'>
+			<div className='customer-type animated fadeInRight delay-1s flex-center-column'>
 				<span className='question'>Who is it for?</span>
-				<div className='options'>
-					<div className='option' id='Private' onClick={() => {changeButtonPressed('Private');propChanged('Private');}}>
+				<div className='options flex-center'>
+					<div className='option flex-center-column' id='Private' onClick={() => {changeButtonPressed('Private');propChanged('Private');}}>
 						<div className='option-image'>
 							<img src={selfRoll} alt='option1img'/>
 						</div>
@@ -50,7 +50,7 @@ class CustomerType extends React.Component {
 							<span className='text'>Im styling for myself</span>
 						</div>
 					</div>
-					<div className='option' id='Business/Event' onClick={() => {changeButtonPressed('Business/Event');propChanged('Business/Event');}}>
+					<div className='option flex-center-column' id='Business/Event' onClick={() => {changeButtonPressed('Business/Event');propChanged('Business/Event');}}>
 						<div className='option-image'>
 							<img src={selfRoll} alt='option2img'/>
 						</div>

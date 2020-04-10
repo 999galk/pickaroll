@@ -1,69 +1,46 @@
 @import '../../index.scss';
+.contact-page{
+    height:100%;
+
+.container-fluid{
+    height:100%;
+    margin-bottom:15px;
+}
+.row{
+    height:100%;
+}
+.wizard-container{
+    height: 100%;
+}
+
+.wizard-container .card-wizard.active{
+    height:100%;
+}
+
 .wizard-container .card-wizard .card-header{
-	font-family: 'Assistant', sans-serif !important;
-	color: white;
-	font-weight: bolder;
+    font-family: 'Assistant', sans-serif !important;
+    color: white;
+    font-weight: bolder;
+
+        height: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .card-title {
+        margin-bottom: 1.5rem;
+    }
 }
 .wizard-container .card-wizard .card-footer .btn{
-	background-color: #5081ff;
+    background-color: #5081ff;
 }
 
 .wizard-container .card-wizard .card-footer .btn:active:focus, .wizard-container .card-wizard .card-footer .btn:active:hover{
-	background-color: #5081ff;
+    background-color: #5081ff;
 }
 
 .wizard-container .card-wizard .card-footer .btn:hover, .wizard-container .card-wizard .card-footer .btn:focus, .wizard-container .card-wizard .card-footer .btn:active, .wizard-container .card-wizard .card-footer .btn.active{
-	background-color: #5081ff;
+    background-color: #5081ff;
 }
 
-@include respond(phone) {
-  .wizard-container, .card card-wizard active card{
-	opacity:0.8;
-    background-color:#ccc;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:1000;
-}
-}
-@include respond(phone-xs) {
-    .wizard-container, .card card-wizard active card{
-	opacity:0.8;
-    background-color:#ccc;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:1000;
-}
-}
-@include respond(tab-port) {
-    .wizard-container, .card card-wizard active card{
-	opacity:0.8;
-    background-color:#ccc;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:1000;
-}
-}
-@include respond(tab-land) {
-    .wizard-container, .card card-wizard active card{
-	opacity:0.8;
-    background-color:#ccc;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:1000;
-}
-}
-@include respond(big-desktop) {
-    
+
 }

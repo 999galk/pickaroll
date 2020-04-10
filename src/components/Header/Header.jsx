@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
 import './Header.scss';
 import logo from './assets/logo.png';
 import bidud from './assets/bidud.jpg';

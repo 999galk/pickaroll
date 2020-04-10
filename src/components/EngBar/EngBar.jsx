@@ -5,7 +5,7 @@ import './EngBar.scss';
 
 const EngBar = () => {
 	return(
-		<div className='engag-bar animated fadeInUp delay-3s'>
+		<div className='engag-bar animated fadeInUp delay-3s flex-center'>
 			<Link to='/getStarted'><CustomButton inverted><span className='btn-text'>Pick your own roll</span></CustomButton></Link>
 		</div>
 	)

@@ -1,7 +1,6 @@
+@import '../../index.scss';
 .engag-bar {
 	width:100%;
-	display:flex;
-	justify-content:center;
 	padding:25px;
 	position:fixed;
 	bottom:0px;
@@ -9,70 +8,38 @@
 	background-color:white;
 	border-radius:10px;
 	box-shadow: 0 0 10px rgba(0,0,0,.12);
+	a{
+	        text-decoration:none;
+	  }
 
-	/* 
-			  ##Device = Desktops
-			  ##Screen = 1281px to higher resolution desktops
-			*/
+		@include respond(phone) {
+        	.btn-text{
+        		font-size: $mid-font-size;
 
-			@media (min-width: 1281px) {
-				  
-			}
+        	}
+	    }
+	    @include respond(phone-xs) {
+	        .btn-text{
+        		font-size: $mid-font-size;
 
-		/* 
-		  ##Device = Laptops, Desktops
-		  ##Screen = B/w 1025px to 1280px
-		*/
+        	}
+	    }
+	    @include respond(tab-port) {
+	        .btn-text{
+        		font-size: $default-font-size;
 
-		@media (min-width: 1025px) and (max-width: 1280px) {
-			.btn-text{
-        			
-   				 }
+        	}
+	    }
+	    @include respond(tab-land) {
+	        .btn-text{
+        		font-size: $default-font-size;
 
-		}
-
-		/* 
-		  ##Device = Tablets, Ipads (portrait)
-		  ##Screen = B/w 768px to 1024px
-		*/
-
-		@media (min-width: 768px) and (max-width: 1024px) {
-		  .btn-text{
-        			font-size: 18px;
-   			}
-			
-		}
-
-		/* 
-		  ##Device = Tablets, Ipads (landscape)
-		  ##Screen = B/w 768px to 1024px
-		*/
-
-		@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-		  .btn-text{
-        			font-size: 18px;
-   			}
-		}
-
-		/* 
-		  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-		  ##Screen = B/w 481px to 767px
-		*/
-
-		@media (min-width: 481px) and (max-width: 767px) {
-		  .btn-text{
-        			font-size: 15px;
-   			}
-		}
-
-		/* 
-		  ##Device = Most of the Smartphones Mobiles (Portrait)
-		  ##Screen = B/w 320px to 479px
-		*/
-
-		@media (min-width: 320px) and (max-width: 480px) {
-		  .btn-text{
-        			font-size: 15px;
-   			}	
-		}
+        	}
+	    }
+	    @include respond(big-desktop) {
+	        .btn-text{
+        		font-size: $default-font-size;
+ 
+        	}
+	    }
 }

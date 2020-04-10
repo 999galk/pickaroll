@@ -1,8 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+} 
+
 body {
-	width:100%;
-	height:100%;
-  margin: 0;
-  font-family: 'Assistant', sans-serif !important;
+    height: 100%;
+    margin: 0;
+    font-family: 'Assistant', sans-serif !important;
+    background-color: #f2f2f2;
+}
+
+a{
+  text-decoration: none;
 }
 
 code {
@@ -30,16 +42,20 @@ $small-font-size: 1rem;/*smaill-device*/
 	display:flex;
 	justify-content: space-evenly;
 }
+.overlay{
+    opacity:0.8;
+    background-color:#ccc;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
 
 
 /*
 MEDIA QUERY MANAGER
-
-0 - 600px:          Phone
-600px - 900px       Table Portrait
-900px - 1200px      Table Landscape
-[1200px - 1800px]   Desktop Normal Styles
-1800px +            Big Desktop
 
 1em = 16px
 
@@ -49,32 +65,32 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
 @mixin respond($breakpoint) {
   // Phone-xs
   @if $breakpoint == phone-xs {
-    @media (max-width: 20em) {
+    @media (min-width: 320px) and (max-width: 480px) {
       @content;
-    } //0 - 320px
+    } //320px - 480px
   }
   // Phone
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
+    @media (min-width: 481px) and (max-width: 767px) {
       @content;
-    } //0 - 600px
+    } //481px - 767px
   }
   // Table Portrait
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
+    @media (min-width: 1025px) and (max-width: 1280px) {
       @content;
-    } //900px
+    } //1025px - 1280px
   }
   // Table Landscape
   @if $breakpoint == tab-land {
-    @media (max-width: 75em) {
+    @media (min-width: 768px) and (max-width: 1024px) {
       @content;
-    } //1200px
+    } //768px - 1024px
   }
   // Big Desktop
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) {
+    @media (min-width: 1281px) {
       @content;
-    } //1800px +
+    } //1281px +
   }
 }

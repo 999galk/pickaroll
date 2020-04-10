@@ -7,19 +7,18 @@
 		margin:1%;
 
 		.text{
-			font-size: $default-font-size;
 		
 			@include respond(phone) {
-		        font-size: $small-font-size;
+		        font-size: $mid-font-size;
 		    }
 		    @include respond(phone-xs) {
-		        font-size: $small-font-size;
+		        font-size: $mid-font-size;
 		    }
 		    @include respond(tab-port) {
-		        font-size: $small-font-size;
+		        font-size: $default-font-size;
 		    }
 		    @include respond(tab-land) {
-		        font-size: $small-font-size;
+		        font-size: $default-font-size;
 		    }
 		    @include respond(big-desktop) {
 		        font-size: $default-font-size;

@@ -17,7 +17,7 @@ class CustomerName extends React.Component{
 
 	render(){
 		return(
-			<div className='customer-name animated fadeInRight' id='customer-name'>
+			<div className='customer-name animated fadeInRight flex-center-column' id='customer-name'>
 				<span className='title'>Let's get to know you!</span>
 				<input type='text' placeholder='Whats your name?' id='name-input' value={localStorage.getItem('name')} onChange={ event => this.propChanged(event.target.value)}/>
 			</div>

@@ -65,28 +65,28 @@
 	    @include respond(tab-port) {
 	        .instagram-logo{
 				img {
-			      width: 15%;
+			      width: 10%;
 			      height: 100%;
 			    }
 			}
 
 			  .instagram-link {
 				a{
-					font-size:$small-font-size;
+					font-size:$mid-font-size;
 				}
 			}
 	    }
 	    @include respond(tab-land) {
 	        .instagram-logo{
 				img {
-			      width: 15%;
+			      width: 10%;
 			      height: 100%;
 			    }
 			}
 
 			  .instagram-link {
 				a{
-					font-size:$small-font-size;
+					font-size:$mid-font-size;
 				}
 			}
 	    }

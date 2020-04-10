@@ -40,36 +40,21 @@ class ContactPage extends React.Component {
 	}
 	
 	render() {
-		console.log('currentState:', this.state);
-		const {name,email,customerType,step} = this.state;
-		const {propChanged} = this;
 		const steps = [
 		  {
 		    stepName: "1/3",
 		    stepIcon: "tim-icons icon-single-02",
 		    component: CustomerType,
-		    stepProp: {
-		      propChanged: propChanged
-		    }
 		  },
 		  {
 		    stepName: "2/3",
 		    stepIcon: "tim-icons icon-settings-gear-63",
 		    component: CustomerName,
-		    stepProp: {
-		      name: this.state.name,
-		      propChanged: this.propChanged
-		    }
 		  },
 		  {
 		    stepName: "3/3",
 		    stepIcon: "tim-icons icon-delivery-fast",
 		    component: CustomerEmail,
-		    stepProp: {
-		      name: this.state.name,
-		      email: this.state.email,
-		      propChanged: this.propChanged
-		    }
 		  }
 		];
 
@@ -92,7 +77,7 @@ class ContactPage extends React.Component {
 		          </Col>
 		        </Row>
 	      </Container>
-	      : <Message name={this.state.name} />
+	      : <Message />
 		}
 		
 		</div>
