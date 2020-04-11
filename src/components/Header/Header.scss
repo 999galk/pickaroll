@@ -118,7 +118,7 @@
 
 			}
 	    }
-	    @include respond(tab-port) {
+	    @include respond(tablet) {
 	        .header-item{
 			  .logo-centered {
 					width: 18%;
@@ -145,34 +145,7 @@
 
 			}
 	    }
-	    @include respond(tab-land) {
-	        .header-item{
-			  .logo-centered {
-					width: 18%;
-				}
-
-			  .slogen{
-					width: 90%;
-					.headline{
-							font-size:$big-font-size;
-						}
-						.text{
-							font-size:$default-font-size;
-						}
-				}
-			}
-			.carousel-container{
-				.carousel.carousel-slider{
-					width:50% !important;
-				}
-
-				li{
-				line-height: 1.5rem;
-				}
-
-			}
-	    }
-	    @include respond(big-desktop) {
+	    @include respond(desktop) {
 	    	.header-item{
 			  .logo-centered {
 					width: 20%;

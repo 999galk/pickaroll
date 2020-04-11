@@ -12,34 +12,28 @@
 	        text-decoration:none;
 	  }
 
-		@include respond(phone) {
-        	.btn-text{
-        		font-size: $mid-font-size;
+	@include respond(phone) {
+    	.btn-text{
+    		font-size: $mid-font-size;
 
-        	}
-	    }
-	    @include respond(phone-xs) {
-	        .btn-text{
-        		font-size: $mid-font-size;
+    	}
+    }
+    @include respond(phone-xs) {
+        .btn-text{
+    		font-size: $mid-font-size;
 
-        	}
-	    }
-	    @include respond(tab-port) {
-	        .btn-text{
-        		font-size: $default-font-size;
+    	}
+    }
+    @include respond(tablet) {
+        .btn-text{
+    		font-size: $default-font-size;
 
-        	}
-	    }
-	    @include respond(tab-land) {
-	        .btn-text{
-        		font-size: $default-font-size;
+    	}
+    }
+    @include respond(desktop) {
+        .btn-text{
+    		font-size: $default-font-size;
 
-        	}
-	    }
-	    @include respond(big-desktop) {
-	        .btn-text{
-        		font-size: $default-font-size;
- 
-        	}
-	    }
+    	}
+    }
 }

@@ -13,13 +13,10 @@
 	    @include respond(phone-xs) {
 	        font-size: $mid-font-size;
 	    }
-	    @include respond(tab-port) {
+	    @include respond(tablet) {
 	        font-size: $default-font-size;
 	    }
-	    @include respond(tab-land) {
-	        font-size: $default-font-size;
-	    }
-	    @include respond(big-desktop) {
+	    @include respond(desktop) {
 	        font-size: $default-font-size;
 	    }
 
@@ -38,13 +35,10 @@
 	    @include respond(phone-xs) {
 	        font-size: $small-font-size;
 	    }
-	    @include respond(tab-port) {
+	    @include respond(tablet) {
 	        font-size: $mid-font-size;
 	    }
-	    @include respond(tab-land) {
-	        font-size: $mid-font-size;
-	    }
-	    @include respond(big-desktop) {
+	    @include respond(desktop) {
 	        font-size: $mid-font-size;
 	    }
 	}
@@ -62,15 +56,11 @@
 	        margin-left:2%;
 			margin-right:2%;
 	    }
-	    @include respond(tab-port) {
+	    @include respond(tablet) {
 	        margin-left:5%;
 			margin-right:5%;
 	    }
-	    @include respond(tab-land) {
-	        margin-left:5%;
-			margin-right:5%;
-	    }
-	    @include respond(big-desktop) {
+	    @include respond(desktop) {
 	        margin-left:5%;
 			margin-right:5%;
 	    }

@@ -1,20 +1,11 @@
+@import '../../index.scss';
 .message-container {
-	display:flex;
-	justify-content: center;
-	flex-direction: column;
-	background-color:white;
 	border-radius: 8px;
-	margin:10% 30% 10% 30%;
 	padding: 6%;
 
 	.title{
-		font-size: 32px;
 		font-weight: bolder;
 		margin-bottom:10%;
-	}
-
-	text {
-		font-size:25px;
 	}
 
 	button{
@@ -25,76 +16,49 @@
 		text-decoration:none;	
 	}
 
+	@include respond(phone) {
+    	margin: 50% 5% 0% 5%;
+		background-color:transparent;
+
+		.title{
+			font-size: $default-font-size;
+		}
+		.text{
+			font-size: $mid-font-size;
+		}
+    }
+    @include respond(phone-xs) {
+        margin: 50% 5% 0% 5%;
+		background-color:transparent;
+
+		.title{
+			font-size: $default-font-size;
+		}
+		.text{
+			font-size: $mid-font-size;
+		}
+    }
+    @include respond(tablet) {
+        background-color:white;
+		margin:10% 30% 10% 30%;
+
+		.title{
+			font-size: $big-font-size;
+		}
+		.text{
+			font-size: $default-font-size;
+		}
+    }
+    @include respond(desktop) {
+        background-color:white;
+		margin:10% 30% 10% 30%;
+
+		.title{
+			font-size: $big-font-size;
+		}
+		.text{
+			font-size: $default-font-size;
+		}
+    }
 
 }
-
-/* 
-		  ##Device = Desktops
-		  ##Screen = 1281px to higher resolution desktops
-		*/
-
-		@media (min-width: 1281px) {
-		  
-		}
-
-		/* 
-		  ##Device = Laptops, Desktops
-		  ##Screen = B/w 1025px to 1280px
-		*/
-
-		@media (min-width: 1025px) and (max-width: 1280px) {
-	
-		  
-		  
-		}
-
-		/* 
-		  ##Device = Tablets, Ipads (portrait)
-		  ##Screen = B/w 768px to 1024px
-		*/
-
-		@media (min-width: 768px) and (max-width: 1024px) {
-			.message-container {
-				margin: 50% 5% 0% 5%;
-				background-color:transparent;
-			}
-		  
-		}
-
-		/* 
-		  ##Device = Tablets, Ipads (landscape)
-		  ##Screen = B/w 768px to 1024px
-		*/
-
-		@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-			.message-container {
-				margin: 50% 5% 0% 5%;
-				background-color:transparent;
-			}
-		  
-		}
-
-		/* 
-		  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-		  ##Screen = B/w 481px to 767px
-		*/
-
-		@media (min-width: 481px) and (max-width: 767px) {
-		 .message-container {
-				margin: 50% 5% 0% 5%;
-				background-color:transparent;
-			}
-		}
-
-		/* 
-		  ##Device = Most of the Smartphones Mobiles (Portrait)
-		  ##Screen = B/w 320px to 479px
-		*/
-
-		@media (min-width: 320px) and (max-width: 480px) {
-			.message-container {
-				margin: 50% 5% 0% 5%;
-				background-color:transparent;
-			}
-		  
-		}

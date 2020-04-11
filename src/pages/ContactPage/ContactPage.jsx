@@ -64,7 +64,7 @@ class ContactPage extends React.Component {
 			! this.state.submited ?
 			<Container fluid style={{ marginTop: "15px" }}>
 		        <Row>
-		          <Col xs={12} md={12} sm={12} className="mr-auto ml-auto">
+		          <Col xs={12} md={8} sm={12} className="mr-auto ml-auto">
 		            <ReactWizard
 		              steps={steps}
 		              navSteps

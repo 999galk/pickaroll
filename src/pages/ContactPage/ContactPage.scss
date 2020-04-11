@@ -10,6 +10,7 @@
     .row{
         height:100%;
     }
+    
     .wizard-container{
        height: 100%;
        
@@ -19,13 +20,10 @@
         @include respond(phone-xs) {
             padding-bottom: 10%;
         }
-        @include respond(tab-port) {
+        @include respond(tablet) {
             padding-bottom: 4%;
         }
-        @include respond(tab-land) {
-            padding-bottom: 4%;
-        }
-        @include respond(big-desktop) {
+        @include respond(desktop) {
             padding-bottom: 4%;
         }
     }
@@ -38,11 +36,11 @@
         font-family: 'Assistant', sans-serif !important;
         color: white;
         font-weight: bolder;
-
-            height: 25%;
+        height: 25%;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        
         .card-title {
             margin-bottom: 1.5rem;
         }

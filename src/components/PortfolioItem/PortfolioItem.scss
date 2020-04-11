@@ -29,7 +29,6 @@
 		a{
 			text-decoration:none;
 			color:gray;
-			font-size:$mid-font-size;
 		}
 	}
 
@@ -62,7 +61,7 @@
 				}
 			}
 	    }
-	    @include respond(tab-port) {
+	    @include respond(tablet) {
 	        .instagram-logo{
 				img {
 			      width: 10%;
@@ -76,8 +75,8 @@
 				}
 			}
 	    }
-	    @include respond(tab-land) {
-	        .instagram-logo{
+	    @include respond(desktop) {
+	       .instagram-logo{
 				img {
 			      width: 10%;
 			      height: 100%;
@@ -89,9 +88,6 @@
 					font-size:$mid-font-size;
 				}
 			}
-	    }
-	    @include respond(big-desktop) {
-	       
 	    }
 
 }

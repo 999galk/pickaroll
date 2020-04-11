@@ -6,22 +6,6 @@
 
 	.question{
   		font-weight: bolder;
-  		
-  		@include respond(phone) {
-        font-size: $default-font-size;
-	    }
-	    @include respond(phone-xs) {
-	        font-size: $default-font-size;
-	    }
-	    @include respond(tab-port) {
-	        font-size: $big-font-size;
-	    }
-	    @include respond(tab-land) {
-	        font-size: $big-font-size;
-	    }
-	    @include respond(big-desktop) {
-	        font-size: $big-font-size;
-	    }
 	}
 
 	.options{
@@ -55,43 +39,11 @@
 					font-weight: bolder;
 					color:#5081ff;
 					margin-bottom: 10px;
-					@include respond(phone) {
-			        font-size: $mid-font-size;
-				    }
-				    @include respond(phone-xs) {
-				        font-size: $mid-font-size;
-				    }
-				    @include respond(tab-port) {
-				        font-size: $default-font-size;
-				    }
-				    @include respond(tab-land) {
-				        font-size: $default-font-size;
-				    }
-				    @include respond(big-desktop) {
-				        font-size: $default-font-size;
-				    }
-
 				}
 				.text{
 					font-weight: bolder;
 					color:gray;
 					margin-bottom: 30px;
-
-					@include respond(phone) {
-			        font-size: $small-font-size;
-				    }
-				    @include respond(phone-xs) {
-				        font-size: $small-font-size;
-				    }
-				    @include respond(tab-port) {
-				        font-size: $mid-font-size;
-				    }
-				    @include respond(tab-land) {
-				        font-size: $mid-font-size;
-				    }
-				    @include respond(big-desktop) {
-				        font-size: $mid-font-size;
-				    }
 				}
 
 			}
@@ -108,6 +60,7 @@
 		margin:0;
 		.question{
   			margin-bottom:10%;
+  			font-size: $default-font-size;
   		}
 		.options{
 		flex-direction:column;
@@ -129,6 +82,14 @@
 				.titleContainer{
 					width:100%;
 					margin-right:10px;
+
+					.title{
+			        	font-size: $mid-font-size;
+					}
+
+					.text{
+						font-size: $small-font-size;
+					}
 				}
 			}
 		}
@@ -137,6 +98,7 @@
     	margin:0;
     	.question{
   			margin-bottom:10%;
+  			font-size: $default-font-size;
   		}
         .options{
         	flex-direction:column;
@@ -158,44 +120,23 @@
 				.titleContainer{
 					width:100%;
 					margin-right:10px;
-				}
-			}
-		}
-    }
-    @include respond(tab-port) {
-    	margin:0;
-    	.question{
-  			margin-bottom:5%;
-  		}
-        .options{
-        	flex-direction:column;
-			.option{
-				flex-direction:row;
-				width:100%;
-				margin:5% 0 5% 0;
-				height:150px;
 
-				.option-image{
-					display:flex;
-					justify-content:center;
-					margin:5%;
-					img{
-						width:100%;
+					.title{
+			        	font-size: $mid-font-size;
+					}
+
+					.text{
+						font-size: $small-font-size;
 					}
 				}
-
-				.titleContainer{
-					width:100%;
-					margin-right:10px;
-				}
 			}
 		}
-        
     }
-    @include respond(tab-land) {
+
+    @include respond(teblet) {
     	margin:0;
     	.question{
-  			margin-bottom:5%;
+  			font-size: $big-font-size;
   		}
         .options{
         	flex-direction:column;
@@ -217,12 +158,32 @@
 				.titleContainer{
 					width:100%;
 					margin-right:10px;
+
+					.title{
+			        	font-size: $default-font-size;
+					}
+
+					.text{
+						font-size: $mid-font-size;
+					}
 				}
 			}
 		}
         
     }
-    @include respond(big-desktop) {
-        
+    @include respond(desktop) {
+        .question{
+  			font-size: $big-font-size;
+  		}
+
+  		.options .option .titleContainer{
+			.title{
+	        	font-size: $default-font-size;
+			}
+
+			.text{
+				font-size: $mid-font-size;
+			}			
+		}
     }
 }

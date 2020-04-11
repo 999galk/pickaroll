@@ -8,41 +8,11 @@
 	.title{
 		font-weight: bolder;
 		margin-bottom:10%;
-		@include respond(phone) {
-        font-size: $default-font-size;
-	    }
-	    @include respond(phone-xs) {
-	        font-size: $default-font-size;
-	    }
-	    @include respond(tab-port) {
-	        font-size: $big-font-size;
-	    }
-	    @include respond(tab-land) {
-	        font-size: $big-font-size;
-	    }
-	    @include respond(big-desktop) {
-	        font-size: $big-font-size;
-	    }
 	}
 
 	input {
 		border-radius: 8px;
 		padding:15px;
-		@include respond(phone) {
-        font-size: $mid-font-size;
-	    }
-	    @include respond(phone-xs) {
-	        font-size: $mid-font-size;
-	    }
-	    @include respond(tab-port) {
-	        font-size: $default-font-size;
-	    }
-	    @include respond(tab-land) {
-	        font-size: $default-font-size;
-	    }
-	    @include respond(big-desktop) {
-	        font-size: $default-font-size;
-	    }
 	}
 
 	.error-message{
@@ -57,9 +27,11 @@
 		background-color:transparent;
 		.title{
 			margin-bottom:10%;
+			font-size: $default-font-size;
 		}
 		input{
 			width:100%;
+			font-size: $mid-font-size;
 		}
     }
     @include respond(phone-xs) {
@@ -69,38 +41,35 @@
 		background-color:transparent;
 		.title{
 			margin-bottom:20%;
+			font-size: $default-font-size;
 		}
 		input{
 			width:100%;
+			font-size: $mid-font-size;
 		}
     }
-    @include respond(tab-port) {
-    	margin: 5%;
-        margin-top:25%;
-        margin-bottom:18%;
-		background-color:transparent;
-		.title{
-			margin-bottom:20%;
-		}
-		input{
-			width:100%;
-		}
-
-    }
-    @include respond(tab-land) {
+    @include respond(tablet) {
     	margin: 10%;
         margin-top:25%;
         margin-bottom:18%;
 		background-color:transparent;
 		.title{
 			margin-bottom:20%;
+			font-size: $big-font-size;
 		}
 		input{
 			width:100%;
+			font-size: $default-font-size;
 		}
 
     }
-    @include respond(big-desktop) {
+    @include respond(desktop) {
+    	.title{
+			font-size: $big-font-size;
+		}
+    	input{
+			font-size: $default-font-size;
+		}
 
     }
 	
