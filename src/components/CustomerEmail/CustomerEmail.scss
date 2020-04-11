@@ -75,9 +75,29 @@
 		}
     }
     @include respond(tab-port) {
+    	margin: 5%;
+        margin-top:25%;
+        margin-bottom:18%;
+		background-color:transparent;
+		.title{
+			margin-bottom:20%;
+		}
+		input{
+			width:100%;
+		}
 
     }
     @include respond(tab-land) {
+    	margin: 10%;
+        margin-top:25%;
+        margin-bottom:18%;
+		background-color:transparent;
+		.title{
+			margin-bottom:20%;
+		}
+		input{
+			width:100%;
+		}
 
     }
     @include respond(big-desktop) {

@@ -163,9 +163,63 @@
 		}
     }
     @include respond(tab-port) {
+    	margin:0;
+    	.question{
+  			margin-bottom:5%;
+  		}
+        .options{
+        	flex-direction:column;
+			.option{
+				flex-direction:row;
+				width:100%;
+				margin:5% 0 5% 0;
+				height:150px;
+
+				.option-image{
+					display:flex;
+					justify-content:center;
+					margin:5%;
+					img{
+						width:100%;
+					}
+				}
+
+				.titleContainer{
+					width:100%;
+					margin-right:10px;
+				}
+			}
+		}
         
     }
     @include respond(tab-land) {
+    	margin:0;
+    	.question{
+  			margin-bottom:5%;
+  		}
+        .options{
+        	flex-direction:column;
+			.option{
+				flex-direction:row;
+				width:100%;
+				margin:5% 0 5% 0;
+				
+
+				.option-image{
+					display:flex;
+					justify-content:center;
+					margin:5%;
+					img{
+						width:60%;
+					}
+				}
+
+				.titleContainer{
+					width:100%;
+					margin-right:10px;
+				}
+			}
+		}
         
     }
     @include respond(big-desktop) {
